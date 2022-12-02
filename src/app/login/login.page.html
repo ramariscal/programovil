@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title >Login</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-avatar>
+        <img src="/assets/feliz.png" class="feliz"/>
+      </ion-avatar>
+      
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card-header>
+      <ion-card-title>Login</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      
+        <ion-label position="floating">Email</ion-label>
+        <ion-input  type="email"
+                    [(ngModel)]="user.email" 
+                    required 
+                    placeholder="correo@gmail.com" 
+                    pattern="^[a-zA-Z0-9.!#$%&'+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)$"></ion-input>
+    
+        <ion-label position="floating">Password</ion-label>
+        <ion-input  type="password"
+                    [(ngModel)]="user.password"
+                    pattern="^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{3,8}$"
+                    placeholder="contraseña"
+                    required></ion-input>
+
+      <ion-button (click)="login()" color="dark">
+        Ingresar
+      </ion-button>
+
+        <img src="/assets/Tellevoapp.png" alt="">    
+
+
+
+    </ion-card-content>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/registro']">Registrate</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

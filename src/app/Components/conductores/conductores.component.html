@@ -1,0 +1,23 @@
+<ion-content>
+  <ion-card>
+    <ion-item>
+      <ion-label>Nombre: </ion-label>
+      <ion-input [(ngModel)]="datos.conductor.nombre"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Apellido: </ion-label>
+      <ion-input [(ngModel)]="datos.conductor.Apellido"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Apodo: </ion-label>
+      <ion-input [(ngModel)]="datos.conductor.Apodo"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Modelo: </ion-label>
+      <ion-input [(ngModel)]="datos.conductor.Modelo"></ion-input>
+    </ion-item>
+  </ion-card>
+  
+  <ion-button (click)="AgregarConductor()" size="large">CREAR</ion-button>
+  
+</ion-content>
